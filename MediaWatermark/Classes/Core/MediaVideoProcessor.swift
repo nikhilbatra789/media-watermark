@@ -96,6 +96,7 @@ extension MediaProcessor {
             } else if element.type == .image {
                 elementLayer = CALayer()
                 elementLayer.contents = element.contentImage.cgImage
+                elementLayer.contentsGravity = kCAGravityResizeAspect
             } else if element.type == .text {
                 elementLayer = CATextLayer()
                 (elementLayer as! CATextLayer).string = element.contentText
